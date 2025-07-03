@@ -1,0 +1,1 @@
+docker kill number_qa && docker rm number_qa
