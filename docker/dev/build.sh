@@ -1,8 +1,11 @@
 #/bin/sh
 
-image_repo=675730607
-image_name=rockylinux-10-ubi.arm64
-image_tag=20250809v2
+arch=`uname -m`
+echo "arch $arch"
+
+image_repo=docker.io
+image_name=675730607/ubuntu_24.04_dev.${arch}
+image_tag=20250812v1
 
 image_fullname="${image_repo}/${image_name}:${image_tag}"
 

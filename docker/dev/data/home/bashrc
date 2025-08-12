@@ -1,0 +1,10 @@
+# Source global definitions                                      
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+source /usr/lib/git-core/git-sh-prompt
+
+export PS1='[\u@\h \w]$(__git_ps1)\$ '
+alias grep="grep --line-buffered --color -I --exclude-dir='cmake' --exclude-dir='ProtoGenFile' --exclude-dir '.vimproj' --exclude-dir='.svn' --exclude-dir='_gsdata_' --exclude='*.pb' --exclude='*.bytes' --binary-files=without-match"
+
+export PATH=${PATH}:~/bin
