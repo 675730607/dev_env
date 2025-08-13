@@ -1,0 +1,19 @@
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=utf-8,gbk,gb2312,gb18030,cp936
+
+set nu
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set cindent
+set noswapfile
+" set autochdir
+
+set hlsearch "highlightmatches
+" set incsearch "incrementalsearching
+set ignorecase "searchesarecaseinsensitive...
+set smartcase " ...unless they contain at least one capital letter
+syntax on
+set cursorline
