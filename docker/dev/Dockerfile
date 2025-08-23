@@ -16,7 +16,7 @@ RUN \
         nodejs npm vim git git-lfs file wget curl bzip2 pigz pbzip2 xz-utils \
         openssh-server python3 python3-pip python3-venv net-tools tcpdump  sudo locales \
         telnet iproute2 iputils-ping netcat-openbsd \
-        bc \
+        bc pv \
     && usermod -a -G sudo $USERNAME \
     && echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME \
