@@ -12,6 +12,7 @@ function run() {
     # user00's passwd ArSGkqe8EQe
     docker run -itd --name={param_process_name} -p ${param_local_ssh_port}:22 --shm-size=8G \
         -v ${param_local_dir}:/home/user00 \
+        -v /var/run/docker.sock:/var/run/docker.sock \
         docker.io/675730607/ubuntu_24.04_dev.${arch}:20250812v1
 }
 

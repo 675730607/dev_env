@@ -13,10 +13,10 @@ RUN \
     && chmod +x /tmp/${docker_build_data_dir}/entry_point.sh \
     && apt-get  update -y \
     && apt-get install --no-install-recommends -y \
-        nodejs npm vim git git-lfs file wget curl bzip2 pigz pbzip2 xz-utils \
+        vim git git-lfs file wget curl bzip2 pigz pbzip2 xz-utils \
         openssh-server python3 python3-pip python3-venv net-tools tcpdump  sudo locales \
-        telnet iproute2 iputils-ping netcat-openbsd \
-        bc pv \
+        telnet iproute2 iputils-ping netcat-openbsd docker-cli  docker-buildx \
+        bc pv jq\
     && usermod -a -G sudo $USERNAME \
     && echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME \
@@ -35,8 +35,8 @@ RUN \
     && find /tmp/ -maxdepth 1 -mindepth 1 ! -name ${docker_build_data_dir} -exec rm -fr {} \; 
 
 # 设置语言 \
-ENV LC_ALL en_US.utf8
-ENV LANG en_US.utf8
+ENV LC_ALL=en_US.utf8
+ENV LANG=en_US.utf8
 
 
 

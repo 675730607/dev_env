@@ -11,6 +11,8 @@ fi
 if [ ! -f ${home_dir}/.vimrc ]; then
     cp /tmp/docker_build_data/home/vimrc ${home_dir}/.vimrc
 fi
+# 为个人用户安装 nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 sudo service ssh start
 
